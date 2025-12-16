@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -16,8 +13,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
-  optimizeFonts: true,
+  // Note: removed `eslint`, `swcMinify` and `optimizeFonts` keys because
+  // Next 16 reports those options as unrecognized in `next.config.mjs`.
+  // Keep the config minimal and rely on dedicated ESLint/TS config files.
 }
 
 export default nextConfig
