@@ -18,4 +18,4 @@ const nextConfig = {
   // Keep the config minimal and rely on dedicated ESLint/TS config files.
 }
 
-export default nextConfig
+// export default nextConfig
